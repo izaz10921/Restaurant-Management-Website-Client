@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 const AvailableFoodsCard = ({food}) => {
 
 
@@ -29,7 +31,7 @@ const AvailableFoodsCard = ({food}) => {
 
                     <p>{additionalNotes}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary"> View Details</button>
+                       <Link to="/singleFoodDetails"> <button className="btn btn-primary"> View Details</button></Link>
                     </div>
                 </div>
             </div>
@@ -38,3 +40,4 @@ const AvailableFoodsCard = ({food}) => {
 };
 
 export default AvailableFoodsCard;
+
