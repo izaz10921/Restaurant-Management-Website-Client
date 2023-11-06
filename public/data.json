@@ -1,5 +1,6 @@
 [
-    {
+    { 
+      "foodId": 1,
       "foodImage": "https://i.ibb.co/6sTP4hM/f-1.jpg",
       "foodName": "Vegetable Stir Fry",
       "donatorImage": "https://i.ibb.co/0ZQjWXZ/Screenshot-2022-07-15-at-16-03-18.png",
@@ -9,7 +10,8 @@
       "expiredDate": "2023-12-15",
       "additionalNotes": "No nuts, gluten-free"
     },
-    {
+    {  
+      "foodId": 2,
       "foodImage": "https://i.ibb.co/3r97tcs/f-2.jpg",
       "foodName": "Chicken Pasta",
       "donatorImage": "https://i.ibb.co/0ZQjWXZ/Screenshot-2022-07-15-at-16-03-18.png",
@@ -19,7 +21,8 @@
       "expiredDate": "2023-12-14",
       "additionalNotes": "Contains dairy"
     },
-    {
+    {  
+      "foodId":3,
       "foodImage": "https://i.ibb.co/P1J9JGp/f-3.jpg",
       "foodName": "Fruit Salad",
       "donatorImage": "https://i.ibb.co/0ZQjWXZ/Screenshot-2022-07-15-at-16-03-18.png",
@@ -30,6 +33,7 @@
       "additionalNotes": "Fresh fruits only"
     },
     {
+      "foodId": 4,
       "foodImage": "https://i.ibb.co/k6CQdkj/f-4.jpg",
       "foodName": "Vegetarian Pizza",
       "donatorImage": "https://i.ibb.co/0ZQjWXZ/Screenshot-2022-07-15-at-16-03-18.png",
@@ -40,6 +44,7 @@
       "additionalNotes": "No meat"
     },
     {
+      "foodId": 5,
       "foodImage": "https://i.ibb.co/wW71Tkc/f-5.jpg",
       "foodName": "Rice and Beans",
       "donatorImage": "https://i.ibb.co/0ZQjWXZ/Screenshot-2022-07-15-at-16-03-18.png",
@@ -50,6 +55,7 @@
       "additionalNotes": "Vegan, no soy"
     },
     {
+      "foodId": 6,
       "foodImage": "https://i.ibb.co/800b1FB/f-6.jpg",
       "foodName": "Soup of the Day",
       "donatorImage": "https://i.ibb.co/0ZQjWXZ/Screenshot-2022-07-15-at-16-03-18.png",
@@ -60,6 +66,7 @@
       "additionalNotes": "Low sodium"
     },
     {
+      "foodId": 7,
       "foodImage": "https://i.ibb.co/zSGptxK/f-7.jpg",
       "foodName": "Baked Salmon",
       "donatorImage": "https://i.ibb.co/0ZQjWXZ/Screenshot-2022-07-15-at-16-03-18.png",
@@ -70,6 +77,7 @@
       "additionalNotes": "Contains fish"
     },
     {
+      "foodId": 8,
       "foodImage": "https://i.ibb.co/TcRBrkf/f-8.jpg",
       "foodName": "Pancakes and Syrup",
       "donatorImage": "https://i.ibb.co/0ZQjWXZ/Screenshot-2022-07-15-at-16-03-18.png",
@@ -80,6 +88,7 @@
       "additionalNotes": "Breakfast items"
     },
     {
+      "foodId": 9,
       "foodImage": "https://i.ibb.co/ynJ10TP/f-9.jpg",
       "foodName": "Grilled Cheese Sandwich",
       "donatorImage": "https://i.ibb.co/0ZQjWXZ/Screenshot-2022-07-15-at-16-03-18.png",
@@ -90,6 +99,7 @@
       "additionalNotes": "Contains dairy"
     },
     {
+      "foodId": 10,
       "foodImage": "https://i.ibb.co/Jt1tmfH/f-10.jpg",
       "foodName": "Chocolate Chip Cookies",
       "donatorImage": "https://i.ibb.co/0ZQjWXZ/Screenshot-2022-07-15-at-16-03-18.png",
@@ -100,6 +110,7 @@
       "additionalNotes": "Homemade"
     },
     {
+      "foodId": 11,
       "foodImage": "https://i.ibb.co/71q65sm/f-11.jpg",
       "foodName": "Beef Stir Fry",
       "donatorImage": "https://i.ibb.co/0ZQjWXZ/Screenshot-2022-07-15-at-16-03-18.png",
@@ -110,6 +121,7 @@
       "additionalNotes": "Contains soy sauce"
     },
     {
+      "foodId": 12,
       "foodImage": "https://i.ibb.co/THVPvB0/f-12.jpg",
       "foodName": "Fresh Salad",
       "donatorImage": "https://i.ibb.co/0ZQjWXZ/Screenshot-2022-07-15-at-16-03-18.png",

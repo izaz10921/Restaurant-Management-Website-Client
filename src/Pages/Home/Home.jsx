@@ -1,11 +1,16 @@
+import { Link } from "react-router-dom";
 import Banner from "./Banner";
+import FeaturedFoods from "./FeaturedFoods/FeaturedFoods";
 
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <h3>this is home </h3>
+            
+            <FeaturedFoods></FeaturedFoods>
+
+            <Link to="/availableFoods"><button className="btn btn-primary">Show all</button></Link>
         </div>
     );
 };
