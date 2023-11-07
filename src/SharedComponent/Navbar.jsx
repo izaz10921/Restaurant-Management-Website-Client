@@ -47,18 +47,20 @@ const Navbar = () => {
 
             };
         }}>Add Food</NavLink></li>
-        <li><NavLink to="/m" style={({ isActive }) => {
+        <li><NavLink to="/manageMyFood" style={({ isActive }) => {
             return {
                 fontWeight: isActive ? "bold" : "",
-                color: isActive ? "orange" : "black",
-                textDecoration: isActive ? "underline" : "",
+                color: isActive ? "green" : "black",
+                background: isActive ? "lightgray" : ""
+
             };
         }}>Manage My Foods</NavLink></li>
         <li><NavLink to="/myCart" style={({ isActive }) => {
             return {
                 fontWeight: isActive ? "bold" : "",
-                color: isActive ? "orange" : "black",
-                textDecoration: isActive ? "underline" : "",
+                color: isActive ? "green" : "black",
+                background: isActive ? "lightgray" : ""
+
             };
         }}>My Food Request</NavLink></li>
 

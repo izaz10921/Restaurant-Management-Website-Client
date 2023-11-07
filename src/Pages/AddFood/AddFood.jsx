@@ -55,7 +55,7 @@ const AddFood = () => {
                 console.log(data);
                 Swal.fire({
                     title: 'Success!',
-                    text: 'New product added',
+                    text: 'New food added',
                     icon: 'success',
                     confirmButtonText: 'Cool'
                 })
@@ -71,7 +71,7 @@ const AddFood = () => {
     const { user } = useContext(AuthContext);
     return (
         <div>
-            <h3>Add Food</h3>
+           
 
 
             <form onSubmit={handleAddFood}

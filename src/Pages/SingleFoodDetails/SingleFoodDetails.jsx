@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 
 
 const SingleFoodDetails = () => {
@@ -45,12 +45,10 @@ const SingleFoodDetails = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'New product added',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                  })
+                if(data.insertedId){
+                   alert('service booked')
+                }
+               
 
 
 
