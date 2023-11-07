@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const AvailableFoodsCard = ({food}) => {
 
 
-    const { foodName, foodImage, donatorImage, donatorName, foodQuantity, pickupLocation, expiredDate, additionalNotes } = food
+    const {_id, foodName, foodImage, donatorImage, donatorName, foodQuantity, pickupLocation, expiredDate, additionalNotes } = food
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -31,7 +31,7 @@ const AvailableFoodsCard = ({food}) => {
 
                     <p>{additionalNotes}</p>
                     <div className="card-actions justify-end">
-                       <Link to="/singleFoodDetails"> <button className="btn btn-primary"> View Details</button></Link>
+                    <Link to={`/singleFoodDetails/${_id}`}><button className="btn btn-primary"> View Details</button></Link>
                     </div>
                 </div>
             </div>

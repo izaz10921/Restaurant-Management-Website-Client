@@ -1,40 +1,41 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 
 
-const SingleFoodDetails = () => {
+const AddFood = () => {
 
-
-    const handleFoodRequest = (e) => {
+    const handleAddFood = (e) =>{
 
         e.preventDefault();
         const form = e.target;
 
         const foodName = form .foodName.value;
-        const id= form .id.value;
+        
         const donorEmail= form .donorEmail.value;
-        const userEmail = form .userEmail.value;
+        const donorPhotoURL = form .donorPhotoURL.value;
         const donatorName = form .donatorName.value;
         const pickupLocation = form .pickupLocation.value;
         const expiredDate = form .expiredDate.value;
-        const requestDate = form .requestDate.value;
+       
         const additionalNotes = form .additionalNotes.value;
-        const donationMoney = form .donationMoney.value;
+        const foodQuantity = form .foodQuantity.value;
 
         const requestedFood = {foodName:foodName,
-            id:id,
+            
             donorEmail:donorEmail,
             userEmail:userEmail,
             donatorName:donatorName,
             pickupLocation:pickupLocation,
             expiredDate:expiredDate,
-            requestDate:requestDate,
-            additionalNotes:additionalNotes ,donationMoney:donationMoney}
+            
+            additionalNotes:additionalNotes ,
+            donationMoney:donationMoney}
+
+            
             console.log(requestedFood);
 
-            fetch('http://localhost:5000/requestFood',{
+            fetch('http://localhost:5000/allFoods',{
                 method:'POST',
                 headers:{
                     'content-type':'application/json'
@@ -56,56 +57,17 @@ const SingleFoodDetails = () => {
 
             });
 
-
-
-
-
-
-
-
-
+        
 
     }
+
     const {user}=useContext(AuthContext);
-    const food = useLoaderData();
-    const { donatorName,donorEmail, pickupLocation, foodImage, foodName, foodQuantity, expiredDate, id } = food;
-
-
     return (
-
         <div>
+            <h3>Add Food</h3>
 
 
-            <div>
-
-
-                <h2>Donor information:</h2>
-                <p>Name:{donatorName}</p>
-                <p>Food Pickup Location:{pickupLocation}</p>
-            </div>
-
-            <div>
-                <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src={foodImage} alt="Shoes" /></figure>
-                    <div className="card-body">
-                        <h2 className="card-title">{foodName}</h2>
-
-
-
-                        <p>Food quantity:{foodQuantity}</p>
-
-                        <p>Expire date:{expiredDate}</p>
-
-
-                        <div className="card-actions justify-end">
-                            {/* You can open the modal using document.getElementById('ID').showModal() method */}
-                            <button className="btn  btn-primary" onClick={() => document.getElementById('my_modal_4').showModal()}>Food request</button>
-                            <dialog id="my_modal_4" className="modal">
-                                <div className="modal-box w-11/12 max-w-5xl">
-
-                                    <div><img  className="w-[15opx] h-[150px] mx-auto" src={foodImage} alt="" /></div>
-
-                                    <form onSubmit={handleFoodRequest}
+            <form onSubmit={handleAddFood}
 
                                         className="bg-white shadow-md max-w-4xl mx-auto rounded px-8 py-8 sm:py-6 lg:py-10 mb-4"
                                     >
@@ -122,8 +84,9 @@ const SingleFoodDetails = () => {
                                                     className="w-full py-2 px-3 text-black leading-tight border rounded focus:outline-none focus:shadow-outline"
                                                     name="foodName"
                                                     type="text"
-                                                    defaultValue={foodName}
-                                                    readOnly
+                                                    required
+                                                    
+                                                    
                                                 />
                                             </div>
                                             <div className="mb-4">
@@ -131,14 +94,14 @@ const SingleFoodDetails = () => {
                                                     className="block text-gray-700 text-sm font-bold mb-2"
 
                                                 >
-                                                    Food id
+                                                    Food image URL
                                                 </label>
                                                 <input
                                                     className="w-full py-2 px-3 text-black leading-tight border rounded focus:outline-none focus:shadow-outline"
                                                     name="id"
                                                     type="text"
-                                                    defaultValue={id}
-                                                    readOnly
+                                                    required
+                                                   
                                                 />
                                             </div>
                                         </div>
@@ -154,24 +117,26 @@ const SingleFoodDetails = () => {
                                                     className="w-full py-2 px-3 text-black leading-tight border rounded focus:outline-none focus:shadow-outline"
                                                     name="donorEmail"
                                                     type="text"
-                                                    defaultValue={donorEmail}
-                                                    
+                                                    defaultValue={user.email}
                                                     readOnly
                                                 />
+                                                    
+                                                
                                             </div>
                                             <div className="mb-4">
                                                 <label
                                                     className="block text-gray-700 text-sm font-bold mb-2"
 
                                                 >
-                                                    User email
+                                                    Donor photo URL
                                                 </label>
                                                 <input
                                                     className="w-full py-2 px-3 text-black leading-tight border rounded focus:outline-none focus:shadow-outline"
-                                                    name="userEmail"
+                                                    name="donorPhotoURL"
                                                     type="text"
-                                                    defaultValue={user.email}
+                                                    defaultValue={user.photoURL}
                                                     readOnly
+                                                    
                                                 />
                                             </div>
                                         </div>
@@ -189,9 +154,11 @@ const SingleFoodDetails = () => {
                                                     className="w-full py-2 px-3 text-black leading-tight border rounded focus:outline-none focus:shadow-outline"
                                                     name="donatorName"
                                                     type="text"
-                                                    defaultValue={donatorName}
+                                                    defaultValue={user.displayName}
                                                     readOnly
                                                 />
+                                                   
+                                              
                                             </div>
                                             <div className="mb-4">
                                                 <label
@@ -204,8 +171,8 @@ const SingleFoodDetails = () => {
                                                     className="w-full py-2 px-3 text-black leading-tight border rounded focus:outline-none focus:shadow-outline"
                                                     name="pickupLocation"
                                                     type="text"
-                                                    defaultValue={pickupLocation}
-                                                    readOnly
+                                                    required
+                                                   
                                                 />
                                             </div>
                                         </div>
@@ -222,24 +189,11 @@ const SingleFoodDetails = () => {
                                                     className="w-full py-2 px-3 text-black leading-tight border rounded focus:outline-none focus:shadow-outline"
                                                     name="expiredDate"
                                                     type="date"
-                                                    defaultValue={expiredDate}
-                                                    readOnly
+                                                    required
+                                                   
                                                 />
                                             </div>
-                                            <div className="mb-4">
-                                                <label
-                                                    className="block text-blue-700 text-sm font-bold mb-2"
-
-                                                >
-                                                    Request date
-                                                </label>
-                                                <input
-                                                    className="w-full py-2 px-3 text-black leading-tight border rounded focus:outline-none focus:shadow-outline"
-                                                    name="requestDate"
-                                                    type="date"
-
-                                                />
-                                            </div>
+                                           
                                         </div>
 
 
@@ -264,11 +218,11 @@ const SingleFoodDetails = () => {
                                                 className="block text-blue-700 text-sm font-bold mb-2"
 
                                             >
-                                                Donation Money
+                                               Food Quantity (no. of person to be served)
                                             </label>
                                             <input
                                                 className="w-full py-2 px-3 text-black leading-tight border rounded focus:outline-none focus:shadow-outline"
-                                                name="donationMoney"
+                                                name="foodQuantity"
                                                 type="number"
                                                 required
                                                
@@ -284,50 +238,13 @@ const SingleFoodDetails = () => {
                                                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 mx-auto px-4 rounded focus:outline-none focus:shadow-outline"
                                                 type="submit"
                                             >
-                                                Apply request
+                                                Add Food
                                             </button>
                                         </div>
                                     </form>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                    <div className="modal-action">
-                                        <form method="dialog">
-                                            {/* if there is a button, it will close the modal */}
-                                            <button className="btn btn-error text-white font-bold">Close</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </dialog>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
         </div>
-
-
-
-
     );
-
 };
 
-export default SingleFoodDetails;
+export default AddFood;
