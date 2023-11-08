@@ -1,9 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
-import { useContext} from "react";
+import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 const Navbar = () => {
 
-   
+
 
 
 
@@ -36,7 +36,7 @@ const Navbar = () => {
                 background: isActive ? "lightgray" : ""
 
             };
-        }}>Available Foods</NavLink></li>
+        }}>All Food Items</NavLink></li>
 
 
         <li><NavLink to="/addFood" style={({ isActive }) => {
@@ -46,8 +46,8 @@ const Navbar = () => {
                 background: isActive ? "lightgray" : ""
 
             };
-        }}>Add Food</NavLink></li>
-        <li><NavLink to="/manageMyFood" style={({ isActive }) => {
+        }}>Blog</NavLink></li>
+        {/* <li><NavLink to="/manageMyFood" style={({ isActive }) => {
             return {
                 fontWeight: isActive ? "bold" : "",
                 color: isActive ? "green" : "black",
@@ -62,7 +62,7 @@ const Navbar = () => {
                 background: isActive ? "lightgray" : ""
 
             };
-        }}>My Food Request</NavLink></li>
+        }}>My Food Request</NavLink></li> */}
 
     </>
 
@@ -81,8 +81,8 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    <img className="w-[50px] h-[50px]" src="https://i.ibb.co/Kb0gjK8/food-7223086.png" alt="" />
-                    <button className="btn btn-ghost normal-case text-xl font-bold text-green-500">FoodUnityHub</button>
+                    <img className="w-[50px] h-[50px]" src="https://i.ibb.co/YLB3DhS/beach-bar-7535966.png" alt="" />
+                    <button className="btn btn-ghost normal-case text-xl font-bold text-green-500">TableTrove</button>
 
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -92,18 +92,27 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                
+
                 <div className="navbar-end">
-                    
+
                     <div className="mr-3 text-black">
                         {user && (
                             <div className="flex items-center">
-                                <img
-                                    src={user.photoURL}
-                                    className="w-6 h-6 mr-2"
-                                   
-                                />
-                                <p>{user.displayName}</p>
+                                <div className="dropdown dropdown-end">
+                                    <label tabIndex={0} className="btn  border-4 hover:border-pink-500 btn-circle avatar">
+                                        <div className="w-10  rounded-full ">
+                                            <img src={user.photoURL} />
+                                        </div>
+                                    </label>
+                                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                                        <li>
+                                            <Link>My added food items</Link>
+                                        </li>
+                                        <li><Link>Add a food item</Link></li>
+                                        <li><Link>My ordered food items</Link></li>
+                                    </ul>
+                                </div>
+                                <p className="text-lg pl-2 text-pink-500 font-semibold">{user.displayName}</p>
                             </div>
                         )}
                     </div>

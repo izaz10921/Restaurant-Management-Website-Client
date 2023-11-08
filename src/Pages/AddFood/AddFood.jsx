@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import PageTitle from "../../SharedComponent/PageTitle";
 
 
 const AddFood = () => {
@@ -71,6 +72,7 @@ const AddFood = () => {
     const { user } = useContext(AuthContext);
     return (
         <div>
+            <PageTitle title="TableTrove | Blog"></PageTitle>
            
 
 
