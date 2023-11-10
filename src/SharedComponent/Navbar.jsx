@@ -47,15 +47,15 @@ const Navbar = () => {
 
             };
         }}>Blog</NavLink></li>
-        {/* <li><NavLink to="/manageMyFood" style={({ isActive }) => {
+        {/* <li><NavLink to="/myAddedFood" style={({ isActive }) => {
             return {
                 fontWeight: isActive ? "bold" : "",
                 color: isActive ? "green" : "black",
                 background: isActive ? "lightgray" : ""
 
             };
-        }}>Manage My Foods</NavLink></li>
-        <li><NavLink to="/myCart" style={({ isActive }) => {
+        }}>Manage My Foods</NavLink></li> */}
+        {/* <li><NavLink to="/myCart" style={({ isActive }) => {
             return {
                 fontWeight: isActive ? "bold" : "",
                 color: isActive ? "green" : "black",
@@ -106,7 +106,7 @@ const Navbar = () => {
                                     </label>
                                     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                                         <li>
-                                            <Link>My added food items</Link>
+                                            <Link to="/myAddedFood">My added food items</Link>
                                         </li>
                                         <li><Link to='/addItem'>Add a food item</Link></li>
                                         <li><Link>My ordered food items</Link></li>
