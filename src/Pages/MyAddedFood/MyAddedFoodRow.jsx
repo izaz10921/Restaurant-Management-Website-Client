@@ -1,8 +1,22 @@
+// import { Link } from "react-router-dom";
+
+
+
 import { Link } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 const MyAddedFoodRow = ({ food }) => {
-    const { foodImage, foodName, price } = food;
+
+    
+
+
+
+
+
+
+
+   
+    const { foodImage, foodName, price} = food;
     return (
         <div>
 
@@ -12,12 +26,16 @@ const MyAddedFoodRow = ({ food }) => {
                 <div className="card-body">
                     <h2 className="card-title">{foodName}</h2>
 
-                    
+
                     <p>Price:${price}</p>
 
 
                     <div className="card-actions justify-end">
-                        <Link ><button className="btn btn-primary"> Update</button></Link>
+                        <Link to={`/updateItem/${food._id}`} ><button className="btn btn-primary"> Update</button></Link>
+
+
+                        
+                        
                     </div>
                 </div>
             </div>

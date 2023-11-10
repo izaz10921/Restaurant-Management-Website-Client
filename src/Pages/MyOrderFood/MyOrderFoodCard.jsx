@@ -21,7 +21,7 @@ const MyOrderFoodCard = ({food}) => {
 
 
                     <div className="card-actions justify-end">
-                        <Link ><button className="btn btn-primary"> Update</button></Link>
+                        <Link ><button className="btn btn-primary"> Delete</button></Link>
                     </div>
                 </div>
             </div>
