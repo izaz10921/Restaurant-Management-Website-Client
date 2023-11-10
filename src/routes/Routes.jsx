@@ -6,11 +6,10 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import SingleFoodDetails from "../Pages/SingleFoodDetails/SingleFoodDetails";
-import AddFood from "../Pages/AddFood/AddFood";
-import ManageMyFood from "../Pages/ManageMyFood/ManageMyFood";
 import AddItem from "../Pages/AddItem/AddItem";
 import OrderFood from "../Pages/OrderFood/OrderFood";
 import MyAddedFood from "../Pages/MyAddedFood/MyAddedFood";
+import MyOrderFood from "../Pages/MyOrderFood/MyOrderFood";
 
 const router = createBrowserRouter([
     {
@@ -38,10 +37,7 @@ const router = createBrowserRouter([
           element:<PrivateRoute><SingleFoodDetails></SingleFoodDetails></PrivateRoute>,
           loader:({params})=> fetch(`http://localhost:5000/allFoods/${params.id}`)
         },
-        {
-          path:"/addFood",
-          element:<PrivateRoute><AddFood></AddFood></PrivateRoute>
-        },
+       
         {
           path:"/myAddedFood",
           element:<PrivateRoute><MyAddedFood></MyAddedFood></PrivateRoute>
@@ -54,6 +50,10 @@ const router = createBrowserRouter([
           path:"/orderFood/:id",
           element:<PrivateRoute><OrderFood></OrderFood></PrivateRoute>,
           loader:({params})=> fetch(`http://localhost:5000/allFoods/${params.id}`)
+        },
+        {
+          path:"/myOrderFood",
+          element:<PrivateRoute><MyOrderFood></MyOrderFood></PrivateRoute>
         }
 
 

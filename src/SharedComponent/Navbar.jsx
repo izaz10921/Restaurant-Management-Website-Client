@@ -109,7 +109,7 @@ const Navbar = () => {
                                             <Link to="/myAddedFood">My added food items</Link>
                                         </li>
                                         <li><Link to='/addItem'>Add a food item</Link></li>
-                                        <li><Link>My ordered food items</Link></li>
+                                        <li><Link to='/myOrderFood'>My ordered food items</Link></li>
                                     </ul>
                                 </div>
                                 <p className="text-lg pl-2 text-pink-500 font-semibold">{user.displayName}</p>

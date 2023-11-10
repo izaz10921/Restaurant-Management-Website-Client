@@ -1,18 +1,22 @@
+/* eslint-disable react/prop-types */
+
 import { Link } from "react-router-dom";
 
-/* eslint-disable react/prop-types */
-const MyAddedFoodRow = ({ food }) => {
-    const { foodImage, foodName, price } = food;
+const MyOrderFoodCard = ({food}) => {
+
+    const { foodName, price, buyingDate } = food;
+
     return (
         <div>
 
-
             <div className="card w-96 bg-base-100 shadow-xl">
-                <figure><img src={foodImage} /></figure>
+               
                 <div className="card-body">
                     <h2 className="card-title">{foodName}</h2>
 
-                    
+                    <p>Added time:{buyingDate}</p>
+
+
                     <p>Price:${price}</p>
 
 
@@ -22,8 +26,9 @@ const MyAddedFoodRow = ({ food }) => {
                 </div>
             </div>
 
+
         </div>
     );
 };
 
-export default MyAddedFoodRow;
+export default MyOrderFoodCard;
