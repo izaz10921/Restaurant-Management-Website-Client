@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 
-import { Link } from "react-router-dom";
 
-const MyOrderFoodCard = ({food}) => {
 
-    const { foodName, price, buyingDate } = food;
+const MyOrderFoodCard = ({food,handleDelete}) => {
+
+    const { _id,foodName, price, buyingDate } = food;
 
     return (
         <div>
@@ -21,7 +21,7 @@ const MyOrderFoodCard = ({food}) => {
 
 
                     <div className="card-actions justify-end">
-                        <Link ><button className="btn btn-primary"> Delete</button></Link>
+                       <button onClick={() => handleDelete(_id)} className="btn btn-primary"> Delete</button>
                     </div>
                 </div>
             </div>
