@@ -3,6 +3,7 @@ import Banner from "./Banner";
 
 
 import PageTitle from "../../SharedComponent/PageTitle";
+import TopFood from "./TopFood";
 
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
         <div>
             <PageTitle title="TableTrove | Home"></PageTitle>
             <Banner></Banner>
+            <TopFood></TopFood>
             
             
 

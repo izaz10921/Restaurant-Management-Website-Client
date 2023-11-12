@@ -1,10 +1,20 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
 const OrderFood = () => {
+    const [allFoods, setAllFoods] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/allFoods')
+            .then(res => res.json())
+            .then(data => setAllFoods(data));
+    }, []
+
+    )
+
 
 
 
@@ -19,6 +29,21 @@ const OrderFood = () => {
         const buyerEmail = form .buyerEmail.value;
         const buyingDate = form .buyingDate.value;
         const orderQuantity = form .orderQuantity.value;
+
+
+
+        const availableFood = allFoods.find(food => food.foodName === foodName);
+        const availableFoodQuantity = availableFood ? availableFood.foodQuantity : 0;
+
+        if (parseInt(orderQuantity, 10) > availableFoodQuantity) {
+            Swal.fire({
+                title: 'Error!',
+                text: 'Available food quantity limit reached',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+            return; // Don't proceed with the order if quantity limit is exceeded
+        }
        
 
         const orderFood = {foodName:foodName,
@@ -66,6 +91,7 @@ const OrderFood = () => {
         <div>
 
             <p className="text-center">Order food</p>
+            
             <form onSubmit={handleOrderFood}
 
                 className="bg-white shadow-md max-w-4xl mx-auto rounded px-8 py-8 sm:py-6 lg:py-10 mb-4"
