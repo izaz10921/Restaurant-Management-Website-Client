@@ -13,13 +13,12 @@ const OrderFood = () => {
 
         e.preventDefault();
         const form = e.target;
-
         const foodName = form .foodName.value;
         const price= form .price.value;
         const buyerName= form .buyerName.value;
         const buyerEmail = form .buyerEmail.value;
         const buyingDate = form .buyingDate.value;
-        const foodQuantity = form .foodQuantity.value;
+        const orderQuantity = form .orderQuantity.value;
        
 
         const orderFood = {foodName:foodName,
@@ -27,7 +26,7 @@ const OrderFood = () => {
             buyerName:buyerName,
             buyerEmail:buyerEmail,
             buyingDate:buyingDate,
-            foodQuantity:foodQuantity}
+            orderQuantity:orderQuantity}
             console.log(orderFood);
 
             fetch('http://localhost:5000/orderFood',{
@@ -41,6 +40,7 @@ const OrderFood = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+               
                 if(data.insertedId){
                     Swal.fire({
                         title: 'Success!',
@@ -49,6 +49,7 @@ const OrderFood = () => {
                         confirmButtonText: 'Cool'
                     })
                 }
+                
             
 
             });
@@ -162,11 +163,11 @@ const OrderFood = () => {
                             className="block text-gray-700 text-sm font-bold mb-2"
 
                         >
-                            Food Quantity
+                            Order Quantity
                         </label>
                         <input
                             className="w-full py-2 px-3 text-black leading-tight border rounded focus:outline-none focus:shadow-outline"
-                            name="foodQuantity"
+                            name="orderQuantity"
                             type="number"
 
                           

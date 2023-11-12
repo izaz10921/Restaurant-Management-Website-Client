@@ -63,6 +63,8 @@ const AddItem = () => {
                     confirmButtonText: 'Cool'
                 })
 
+                form.reset();
+
 
 
             });
@@ -84,7 +86,7 @@ const AddItem = () => {
 
 
 
-            <h2>add item page</h2>
+            
 
 
             <form onSubmit={handleAddFoodItem}
