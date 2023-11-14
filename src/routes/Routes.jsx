@@ -11,6 +11,7 @@ import OrderFood from "../Pages/OrderFood/OrderFood";
 import MyAddedFood from "../Pages/MyAddedFood/MyAddedFood";
 import MyOrderFood from "../Pages/MyOrderFood/MyOrderFood";
 import UpdateItem from "../Pages/MyAddedFood/UpdateItem";
+import Blog from "../Pages/Blog/Blog";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
         {
             path:"/register",
             element:<Register></Register>
+        },
+        {
+          path:'/blog',
+          element:<Blog></Blog>
         },
         {
           path:"/singleFoodDetails/:id",

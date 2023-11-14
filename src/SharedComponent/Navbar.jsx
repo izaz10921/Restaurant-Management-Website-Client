@@ -39,7 +39,7 @@ const Navbar = () => {
         }}>All Food Items</NavLink></li>
 
 
-        <li><NavLink to="/addFood" style={({ isActive }) => {
+        <li><NavLink to="/blog" style={({ isActive }) => {
             return {
                 fontWeight: isActive ? "bold" : "",
                 color: isActive ? "green" : "black",
@@ -47,22 +47,7 @@ const Navbar = () => {
 
             };
         }}>Blog</NavLink></li>
-        {/* <li><NavLink to="/myAddedFood" style={({ isActive }) => {
-            return {
-                fontWeight: isActive ? "bold" : "",
-                color: isActive ? "green" : "black",
-                background: isActive ? "lightgray" : ""
-
-            };
-        }}>Manage My Foods</NavLink></li> */}
-        {/* <li><NavLink to="/myCart" style={({ isActive }) => {
-            return {
-                fontWeight: isActive ? "bold" : "",
-                color: isActive ? "green" : "black",
-                background: isActive ? "lightgray" : ""
-
-            };
-        }}>My Food Request</NavLink></li> */}
+   
 
     </>
 
