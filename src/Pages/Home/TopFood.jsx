@@ -20,7 +20,9 @@ const TopFood = () => {
     )
     return (
         <div>
-        <h3>Top Orders:</h3>
+            <p className="text-center text-3xl text-pink-500 font-bold mb-6 pt-24">Top ordered food</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1240px] mx-auto pb-24 ">
+        
         
 
 
@@ -30,6 +32,7 @@ const TopFood = () => {
                 food={food}></TopFoodCard>)
         }
     </div>
+        </div>
     );
 };
 

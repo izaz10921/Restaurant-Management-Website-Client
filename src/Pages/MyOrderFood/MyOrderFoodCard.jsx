@@ -9,7 +9,7 @@ const MyOrderFoodCard = ({food,handleDelete}) => {
     return (
         <div>
 
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 bg-base-100 shadow-xl bg-[url('https://i.ibb.co/Nn4qB2C/top-view-delicious-food-pack.jpg')] bg-cover bg-center">
                
                 <div className="card-body">
                     <h2 className="card-title">{foodName}</h2>
@@ -21,7 +21,7 @@ const MyOrderFoodCard = ({food,handleDelete}) => {
 
 
                     <div className="card-actions justify-end">
-                       <button onClick={() => handleDelete(_id)} className="btn btn-primary"> Delete</button>
+                       <button onClick={() => handleDelete(_id)} className="btn btn-error text-white"> Delete</button>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import PageTitle from "../../SharedComponent/PageTitle";
 
 const SingleFoodDetails = () => {
     const { user } = useContext(AuthContext);
@@ -10,9 +11,12 @@ const SingleFoodDetails = () => {
     const isOrderButtonDisabled = makerEmail === user.email;
 
     return (
-        <div>
+
+     <div>
+           <PageTitle title="TableTrove | Food details"></PageTitle>
+        <div className=" max-w-[400px] pb-32   mx-auto">
             <div>
-                <p>Made by:{makerName}</p>
+                <p className="text-2xl font-semibold pb-3 pt-6">Made by:{makerName}</p>
             </div>
             <div>
                 <div className="card w-96 bg-base-100 shadow-xl">
@@ -35,6 +39,7 @@ const SingleFoodDetails = () => {
                 </div>
             </div>
         </div>
+     </div>
     );
 };
 

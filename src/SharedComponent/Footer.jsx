@@ -6,9 +6,9 @@ const Footer = () => {
             <footer className="footer footer-center p-10 bg-base-300 text-base-content">
                 <aside>
                    
-                    <img className="w-[100px] h-[100px]" src="https://i.ibb.co/Kb0gjK8/food-7223086.png" alt="" />
+                    <img className="w-[100px] h-[100px]" src="https://i.ibb.co/YLB3DhS/beach-bar-7535966.png" alt="" />
                     <p className="font-bold">
-                        FoodUnityHub Ltd. <br />Providing reliable service since 1992
+                    TableTrove Ltd. <br />Providing reliable service since 1992
                     </p>
                     <p>Copyright © 2023 - All right reserved</p>
                     <p>Hotline:+9052533550</p>

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import PageTitle from "../../SharedComponent/PageTitle";
 
 
 const UpdateItem = () => {
@@ -55,9 +56,9 @@ const UpdateItem = () => {
           if(data.modifiedCount >0){
             Swal.fire({
               title: 'Success!',
-              text: 'Do you want to continue',
+              text: 'Updated successfully',
               icon: 'success',
-              confirmButtonText: 'Cool'
+              confirmButtonText: 'Go back'
             })
           }
         });
@@ -70,7 +71,10 @@ const UpdateItem = () => {
     const food = useLoaderData();
    
     return (
-        <div>
+       <div>
+         <PageTitle title="TableTrove | Update food"></PageTitle>
+         <div  style={{ backgroundImage: `url(${food.foodImage})` }}
+        className="bg-cover bg-center h-screen">
 
             <form 
             onSubmit={handleUpdateItem}
@@ -153,7 +157,7 @@ const UpdateItem = () => {
 
                     <div className="mb-4">
                         <label
-                            className="block text-blue-700 text-sm font-bold mb-2"
+                            className="block text-gray-700 text-sm font-bold mb-2"
 
                         >
                             Price
@@ -171,7 +175,7 @@ const UpdateItem = () => {
 
                     <div className="mb-4">
                         <label
-                            className="block text-blue-700 text-sm font-bold mb-2"
+                            className="block text-gray-700 text-sm font-bold mb-2"
 
                         >
                             Food Origin(Country)
@@ -209,7 +213,7 @@ const UpdateItem = () => {
 
                 <div className="mb-4">
                     <label
-                        className="block text-blue-700 text-sm font-bold mb-2"
+                        className="block text-gray-700 text-sm font-bold mb-2"
 
                     >
                         A short description of the food item
@@ -226,7 +230,7 @@ const UpdateItem = () => {
 
                 <div className="mb-4">
                     <label
-                        className="block text-blue-700 text-sm font-bold mb-2"
+                        className="block text-gray-700 text-sm font-bold mb-2"
 
                     >
                         Food Quantity
@@ -257,6 +261,7 @@ const UpdateItem = () => {
             </form>
 
         </div>
+       </div>
     );
 };
 

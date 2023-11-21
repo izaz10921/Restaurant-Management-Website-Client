@@ -4,6 +4,8 @@ import Banner from "./Banner";
 
 import PageTitle from "../../SharedComponent/PageTitle";
 import TopFood from "./TopFood";
+import About from "./About";
+import Team from "./Team";
 
 
 const Home = () => {
@@ -12,6 +14,10 @@ const Home = () => {
             <PageTitle title="TableTrove | Home"></PageTitle>
             <Banner></Banner>
             <TopFood></TopFood>
+            
+            <About></About>
+            
+            <Team></Team>
             
             
 

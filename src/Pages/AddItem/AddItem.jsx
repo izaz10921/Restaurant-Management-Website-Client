@@ -60,7 +60,7 @@ const AddItem = () => {
                     title: 'Success!',
                     text: 'New food item added',
                     icon: 'success',
-                    confirmButtonText: 'Cool'
+                    confirmButtonText: 'Go back'
                 })
 
                 form.reset();
@@ -82,7 +82,7 @@ const AddItem = () => {
 
     return (
         <div>
-            <PageTitle title="TableTrove | User | Add item"></PageTitle>
+            <PageTitle title="TableTrove | Add item"></PageTitle>
 
 
 
@@ -169,7 +169,7 @@ const AddItem = () => {
 
                     <div className="mb-4">
                         <label
-                            className="block text-blue-700 text-sm font-bold mb-2"
+                            className="block text-gray-700 text-sm font-bold mb-2"
 
                         >
                             Price
@@ -187,7 +187,7 @@ const AddItem = () => {
 
                     <div className="mb-4">
                         <label
-                            className="block text-blue-700 text-sm font-bold mb-2"
+                            className="block text-gray-700 text-sm font-bold mb-2"
 
                         >
                             Food Origin(Country)
@@ -224,7 +224,7 @@ const AddItem = () => {
 
                 <div className="mb-4">
                     <label
-                        className="block text-blue-700 text-sm font-bold mb-2"
+                        className="block text-gray-700 text-sm font-bold mb-2"
 
                     >
                         A short description of the food item
@@ -241,7 +241,7 @@ const AddItem = () => {
 
                 <div className="mb-4">
                     <label
-                        className="block text-blue-700 text-sm font-bold mb-2"
+                        className="block text-gray-700 text-sm font-bold mb-2"
 
                     >
                         Food Quantity
@@ -263,7 +263,7 @@ const AddItem = () => {
 
                 <div className="flex items-center justify-between">
                     <button
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 mx-auto px-4 rounded focus:outline-none focus:shadow-outline"
+                        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 mx-auto px-4 rounded focus:outline-none focus:shadow-outline"
                         type="submit"
                     >
                         Add Food Item

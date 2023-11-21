@@ -1,8 +1,12 @@
+import PageTitle from "../../SharedComponent/PageTitle";
 
 
 const Blog = () => {
     return (
         <div className="max-w-[1240px] mx-auto">
+
+            <PageTitle title="TableTrove | Blog"></PageTitle>
+
             <h3 className="text-4xl font-semibold bg-green-300 my-6"> What is One way data binding?
             </h3>
             <p className="text-lg my-6">One-way data binding is a concept in software development and web development that refers to the synchronization of data between the model (or the source of truth) and the view (the user interface). In one-way data binding, the data flows in only one direction, typically from the model to the view.</p>
