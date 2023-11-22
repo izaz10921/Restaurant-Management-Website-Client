@@ -8,7 +8,7 @@ const TopFood = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/orderFood')
+        fetch('https://assignment-11-server-self.vercel.app/orderFood')
             .then(res => res.json())
             .then(data => {
                 // Sort the data in descending order by orderQuantity

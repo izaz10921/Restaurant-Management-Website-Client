@@ -10,7 +10,7 @@ const MyOrderFood = () => {
     const { user } = useContext(AuthContext);
     const [orderFood, setOrderFood] = useState([]);
 
-    const url = `http://localhost:5000/orderFood?email=${user?.email}`;
+    const url = `https://assignment-11-server-self.vercel.app/orderFood?email=${user?.email}`;
 
     useEffect(() => {
 
@@ -33,7 +33,7 @@ const MyOrderFood = () => {
           reverseButtons: true,
         }).then((result) => {
           if (result.isConfirmed) {
-            fetch(`http://localhost:5000/orderFood/${id}`, {
+            fetch(`https://assignment-11-server-self.vercel.app/orderFood/${id}`, {
               method: 'DELETE',
             })
               .then((res) => res.json())

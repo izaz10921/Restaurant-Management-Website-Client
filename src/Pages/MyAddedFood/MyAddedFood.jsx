@@ -10,7 +10,7 @@ const MyAddedFood = () => {
 
     const { user } = useContext(AuthContext);
     const [userFood, setUserFood] = useState([]);
-    const url = `http://localhost:5000/allFoods?email=${user?.email}`;
+    const url = `https://assignment-11-server-self.vercel.app/allFoods?email=${user?.email}`;
 
 
     useEffect(() => {

@@ -12,11 +12,13 @@ import MyAddedFood from "../Pages/MyAddedFood/MyAddedFood";
 import MyOrderFood from "../Pages/MyOrderFood/MyOrderFood";
 import UpdateItem from "../Pages/MyAddedFood/UpdateItem";
 import Blog from "../Pages/Blog/Blog";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement:<ErrorPage></ErrorPage>,
       children:[
         {
             path:"/",
@@ -41,7 +43,7 @@ const router = createBrowserRouter([
         {
           path:"/singleFoodDetails/:id",
           element:<PrivateRoute><SingleFoodDetails></SingleFoodDetails></PrivateRoute>,
-          loader:({params})=> fetch(`http://localhost:5000/allFoods/${params.id}`)
+          loader:({params})=> fetch(`https://assignment-11-server-self.vercel.app/allFoods/${params.id}`)
         },
        
         {
@@ -55,7 +57,7 @@ const router = createBrowserRouter([
         {
           path:"/orderFood/:id",
           element:<PrivateRoute><OrderFood></OrderFood></PrivateRoute>,
-          loader:({params})=> fetch(`http://localhost:5000/allFoods/${params.id}`)
+          loader:({params})=> fetch(`https://assignment-11-server-self.vercel.app/allFoods/${params.id}`)
         },
         {
           path:"/myOrderFood",
@@ -65,7 +67,7 @@ const router = createBrowserRouter([
           path:"/updateItem/:id",
           element:<PrivateRoute><UpdateItem></UpdateItem></PrivateRoute>,
           loader: ({ params }) =>
-          fetch(`http://localhost:5000/allFoods/${params.id}`)
+          fetch(`https://assignment-11-server-self.vercel.app/allFoods/${params.id}`)
         }
 
 

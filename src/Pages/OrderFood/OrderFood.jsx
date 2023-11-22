@@ -9,7 +9,7 @@ const OrderFood = () => {
     const [allFoods, setAllFoods] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allFoods')
+        fetch('https://assignment-11-server-self.vercel.app/allFoods')
             .then(res => res.json())
             .then(data => setAllFoods(data));
     }, []
@@ -57,7 +57,7 @@ const OrderFood = () => {
         }
         console.log(orderFood);
 
-        fetch('http://localhost:5000/orderFood', {
+        fetch('https://assignment-11-server-self.vercel.app/orderFood', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -19,7 +19,7 @@ const AvailableFoods = () => {
     console.log(allFoods);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allFoods?search=${search}`)
+        fetch(`https://assignment-11-server-self.vercel.app/allFoods?search=${search}`)
             .then(res => res.json())
             .then(data => setAllFoods(data));
     }, [search]
